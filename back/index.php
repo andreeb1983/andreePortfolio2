@@ -10,9 +10,11 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
   $firstname = $_SESSION['firstname'];
   $password = $_SESSION['password'];
 
-    echo $firstname;
+  echo $firstname;
+
+  header('location:authentification.php');
        
-    }
+  }
 
 ?>
 
