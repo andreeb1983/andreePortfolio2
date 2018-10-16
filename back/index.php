@@ -6,15 +6,23 @@ session_start(); // à mettre dans toutes les pages de l'admin
 
 if(isset($_SESSION['connexion_admin'])){ // si on est connecté
     
+  $id_user= $_SESSION['id_user'];
   $email = $_SESSION['email'];
   $firstname = $_SESSION['firstname'];
   $password = $_SESSION['password'];
 
-  echo $firstname;
+  // echo $id_user;
 
-  header('location:authentification.php');
-       
-  }
+} else {
+  header('location:authentification.php');  
+}
+
+
+  
+  // requête pour une seule info
+  $sql = $pdoCV -> query("SELECT * FROM t_users WHERE id_user = '$id_user'");
+  $line_user = $sql -> fetch();
+   
 
 ?>
 
@@ -32,6 +40,8 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
 
     <!-- Custom Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

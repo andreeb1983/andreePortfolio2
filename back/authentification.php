@@ -19,12 +19,13 @@ if(isset($_POST['connexion'])){
        $line_user = $sql -> fetch();
        $_SESSION['connexion_admin'] = 'connecté'; // connexion à l'admin
 
+       $_SESSION['id_user']= $line_user['id_user'];
        $_SESSION['email'] = $line_user['email'];
        $_SESSION['firstname'] = $line_user['firstname'];
        $_SESSION['password'] = $line_user['password'];
 
        //echo $line_user['firstname'];
-       header('location:../back/admin/index_admin.html');
+       header('location:index.php');
     }
 }
 
