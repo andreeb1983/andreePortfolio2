@@ -7,7 +7,7 @@ if(isset($_POST['hobby'])){
     $id_hobby = $_POST['id_hobby'];
 
     $pdoCV -> exec(" UPDATE t_hobbies SET hobby='$hobby' WHERE id_hobby='$id_hobby' ");
-    header('location:../back/loisirs.php');
+    header('location:loisirs.php');
     exit();
 }
 

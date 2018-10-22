@@ -9,7 +9,7 @@ if(isset($_POST['skill'])) { // si on a reçu une nouvelle compétence
         $category = addslashes($_POST['category']);
         $pdoCV -> exec("INSERT INTO t_skills VALUES (NULL, '$skill', '$level', '$category', '1')");
 
-        header("location: ../back/competences.php");
+        header("location: competences.php");
             exit();
 
     } // ferme le if n'est pas vide
@@ -38,7 +38,7 @@ if(isset($_GET['id_skill'])) { // on récupère ce que je supprime dans l'url pa
     $sql = "DELETE FROM t_skills WHERE id_skill = '$efface' "; // delete de la BDD
     $pdoCV -> query($sql); // on peut le faire avec exec également
 
-    header("location: ../back/competences.php");
+    header("location: competences.php");
 } // ferme le if isset pour la suppression
 ?>
 

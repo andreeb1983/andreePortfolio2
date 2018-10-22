@@ -7,7 +7,7 @@ if(isset($_POST['hobby'])) { // si on a reçu un nouveau loisir
         $hobby = addslashes($_POST['hobby']);
         $pdoCV -> exec("INSERT INTO t_hobbies VALUES (NULL, '$hobby', '1')");
 
-        header("location: ../back/loisirs.php");
+        header("location: loisirs.php");
             exit();
 
     } // ferme le if n'est pas vide
@@ -20,7 +20,7 @@ if(isset($_GET['id_hobby'])) { // on récupère ce que je supprime dans l'url pa
     $sql = "DELETE FROM t_hobbies WHERE id_hobby = '$efface' "; // delete de la BDD
     $pdoCV -> query($sql); // on peut le faire avec exec également
 
-    header("location: ../back/loisirs.php");
+    header("location: loisirs.php");
 } // ferme le if isset pour la suppression
 ?>
 

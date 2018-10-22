@@ -9,7 +9,7 @@ if(isset($_POST['skill'])){
     $id_skill = $_POST['id_skill'];
 
     $pdoCV -> exec(" UPDATE t_skills SET skill='$skill', level ='$level', category='$category' WHERE id_skill='$id_skill' ");
-    header('location:../back/competences.php');
+    header('location:competences.php');
     exit();
 }
 
