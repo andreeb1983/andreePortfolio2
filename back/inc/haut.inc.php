@@ -13,8 +13,8 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/mystyle-admin.css">
-    <!-- <link href="css/stylish-portfolio.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/mystyleAdmin.css">
+  
 </head>
 
 <body>
