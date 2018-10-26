@@ -1,28 +1,4 @@
-<?php require 'admin/connexion.php';
-
-session_start(); // à mettre dans toutes les pages de l'admin
-
-// traitement pour la connexion à l'admin
-
-if(isset($_SESSION['connexion_admin'])){ // si on est connecté
-    
-  $id_user= $_SESSION['id_user'];
-  $email = $_SESSION['email'];
-  $firstname = $_SESSION['firstname'];
-  $password = $_SESSION['password'];
-
-  // echo $id_user;
-
-} else {
-  header('location:authentification.php');  
-}
-
-
-  
-  // requête pour une seule info
-  $sql = $pdoCV -> query("SELECT * FROM t_users WHERE id_user = '$id_user'");
-  $line_user = $sql -> fetch();
-   
+<?php require 'inc/init.inc.php';
 
 ?>
 
@@ -52,6 +28,7 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/mystyle-admin.css">
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
 
   </head>
 
@@ -62,40 +39,45 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
       <i class="fas fa-bars"></i>
     </a>
     <nav id="sidebar-wrapper">
+
       <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#accueil">Accueil</a>
-        </li>
+
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#competences">Compétences</a>
         </li>
+
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#cv">CV</a>
         </li>
+
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
-        </li>
+          <a class="js-scroll-trigger" href="#experiences">Expériences</a>
+        </li>        
+
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="js-scroll-trigger" href="#formations">Formations</a>
         </li>
+
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#loisirs">Loisirs</a>
         </li>
+
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#admin">Admin</a>
+          <a class="js-scroll-trigger" href="#contact">Contact</a> 
         </li>
+        <!-- <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#admin">Admin</a>
+        </li> -->
       </ul>
     </nav>
 
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h2 class="mb-1">Bienvenue</h2>
-        <h5 class="mb-6"><em>Mon nom est</em></h5>
-        <h1 class="mb-2">
-          Andrée Baptiste
-        </h1>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#accueil">Accueil</a>
+        <h4 class="mb-1">Andrée Baptiste</h4>
+        <h1 class="mb-2">Intégrateur Développeur Web</h1>
+        <h5 class="mb-6"><em>en formation</em></h5>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#competences">Compétences</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -114,67 +96,30 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="content-section bg-primary text-white text-center" id="services">
-      <div class="container">
-        <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Services</h3>
-          <h2 class="mb-5">What We Offer</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Responsive</strong>
-            </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            <h4>
-              <strong>Redesigned</strong>
-            </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
-            </span>
-            <h4>
-              <strong>Favorited</strong>
-            </h4>
-            <p class="text-faded mb-0">Millions of users
-              <i class="fas fa-heart"></i>
-              Start Bootstrap!</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
-            </span>
-            <h4>
-              <strong>Question</strong>
-            </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    Callout
+    <!-- Callout -->
     <section class="callout">
       <div class="container text-center">
-        <h2 class="mx-auto mb-5">Welcome to
-          <em>your</em>
-          next website!</h2>
-        <a class="btn btn-primary btn-xl" href="#cv">Voir mon CV</a>
+        <h2 class="mx-auto mb-5">Mes expériences professionnelles</h2>
+
+        <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
       </div>
     </section>
 
-    <!-- Portfolio -->
+    <section class="content-section bg-light" id="formations">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Mes formations</h2>
+            <p class="lead mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos maxime provident vitae optio rerum eligendi repellendus illum, nihil minima ducimus cum deserunt magnam expedita, libero dolorum. Harum aliquam ipsa praesentium..
+              <!-- <a href="https://unsplash.com/">Unsplash</a>!--></p> 
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#loisirs">Mes loisirs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
@@ -228,16 +173,23 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
           </div>
         </div>
       </div>
+    </section> -->
+    <section class="callout">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">Mes loisirs</h2>
+
+        <a class="btn btn-primary btn-xl" href="#contact">Contact</a>
+      </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="content-section bg-primary text-white">
+    <!-- <section class="content-section bg-primary text-white">
       <div class="container text-center">
         <h2 class="mb-4">The buttons below are impossible to resist...</h2>
         <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
         <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Map -->
     <!-- <section id="contact" class="map">
@@ -248,8 +200,165 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
       </small>
     </section> -->
 
+        <!-- Services -->
+        <section class="content-section bg-primary text-white text-center" id="contact">
+        <div class="container">
+          <div class="content-section-heading">
+            <!-- <h3 class="text-secondary mb-0">Services</h3> -->
+            <h2 class="mb-5">Contactez-moi :</h2>
+              <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+              matter of hours to help you.</p>
+          </div>
+          <div class="row">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          </div>
+          </div>
+        </section>
+          <!--Section: Contact v.2-->
+        <!-- <section class="section"> -->
+
+<!-- Section heading -->
+<!-- <h2 class="h1-responsive font-weight-bold text-center my-5">Contact us</h2> -->
+<!--Section description-->
+<!-- <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+    matter of hours to help you.</p> -->
+
+
+
+
+<!-- formulaire de contact  -->
+<!-- <div class="row"> -->
+
+  <!--Grid column-->
+    <!-- <div class="col-md-9 mb-md-0 mb-5 ">
+        <form id="contact-form" name="contact-form" action="mail.php" method="POST"> -->
+
+            <!--Grid row-->
+            <!-- <div class="row"> -->
+
+                <!--Grid column-->
+                <!-- <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" id="name" name="name" class="form-control">
+                        <label for="name" class="">Your name</label>
+                    </div>
+                </div> -->
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <!-- <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" id="email" name="email" class="form-control">
+                        <label for="email" class="">Your email</label>
+                    </div>
+                </div> -->
+                <!--Grid column-->
+
+            <!-- </div> -->
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="md-form mb-0">
+                        <input type="text" id="subject" name="subject" class="form-control">
+                        <label for="subject" class="">Subject</label>
+                    </div>
+                </div>
+            </div> -->
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <!-- <div class="row"> -->
+
+                <!--Grid column-->
+                <!-- <div class="col-md-12">
+
+                    <div class="md-form">
+                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                        <label for="message">Your message</label>
+                    </div>
+
+                </div>
+            </div> -->
+            <!--Grid row-->
+
+        <!-- </form>
+
+        <div class="text-center text-md-left">
+            <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+        </div>
+        <div class="status"></div>
+    </div> -->
+    <!--Grid column
+
+    <!--Grid column-->
+    <!-- <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+            <li><i class="fa fa-map-marker fa-2x"></i>
+                <p>San Francisco, CA 94126, USA</p>
+            </li>
+
+            <li><i class="fa fa-phone mt-4 fa-2x"></i>
+                <p>+ 01 234 567 89</p>
+            </li>
+
+            <li><i class="fa fa-envelope mt-4 fa-2x"></i>
+                <p>contact@mdbootstrap.com</p>
+            </li>
+        </ul>
+    </div> -->
+    <!--Grid column-->
+    <!-- fin formulaire de contact -->
+
+</div>
+
+</section>
+<!--Section: Contact v.2-->
+
+            <!-- <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-screen-smartphone"></i>
+            </span> -->
+            <!-- <h4>
+              <strong>Responsive</strong>
+            </h4>
+            <p class="text-faded mb-0">Looks great on any screen size!</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-pencil"></i>
+            </span>
+            <h4>
+              <strong>Redesigned</strong>
+            </h4>
+            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-like"></i>
+            </span>
+            <h4>
+              <strong>Favorited</strong>
+            </h4>
+            <p class="text-faded mb-0">Millions of users
+              <i class="fas fa-heart"></i>
+              Start Bootstrap!</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-mustache"></i>
+            </span>
+            <h4>
+              <strong>Question</strong>
+            </h4>
+            <p class="text-faded mb-0">I mustache you a question...</p>
+          </div> -->
+        <!-- </div>
+      </div>
+    </section> -->
+
     <!-- Footer -->
-    <footer class="footer text-center">
+    <!-- <footer class="footer text-center">
       <div class="container">
         <ul class="list-inline mb-5">
           <li class="list-inline-item">
@@ -270,12 +379,12 @@ if(isset($_SESSION['connexion_admin'])){ // si on est connecté
         </ul>
         <p class="text-muted small mb-0">Copyright &copy; Andrée Baptiste | Développeur & Intégrateur Web 2018</p>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <!-- <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
       <i class="fas fa-angle-up"></i>
-    </a>
+    </a> -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

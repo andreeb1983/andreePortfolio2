@@ -1,4 +1,4 @@
-<?php require 'connexion.php'; 
+<?php require 'inc/init.inc.php'; 
 
 // insertion d'une formation
 if(isset($_POST['dates_training'])) { // si on a reçu une nouvelle compétence
@@ -6,9 +6,10 @@ if(isset($_POST['dates_training'])) { // si on a reçu une nouvelle compétence
 
         $dates_training = addslashes($_POST['dates_training']);
         $title_training = addslashes($_POST['title_training']);
-        $subtitle_training= addslashes($_POST['subtitle_training']);
-        $training_establishment= addslashes($_POST['training_establishment']);
-        $pdoCV -> exec("INSERT INTO t_trainings VALUES (NULL, '$dates_training', '$title_training', '$subtitle_training', $training_establishment, '1')");
+        $subtitle_training = addslashes($_POST['subtitle_training']);
+        $training_establishment = addslashes($_POST['training_establishment']);
+        
+        $pdoCV -> exec("INSERT INTO t_trainings VALUES (NULL, '$dates_training', '$title_training', '$subtitle_training', '$training_establishment', '1')");
 
         header("location: formations.php");
             exit();
@@ -21,7 +22,7 @@ $order = '';
 if(isset($_GET['order']) && isset($_GET['column'])){
 
 	if($_GET['column'] == 'dates_trainings'){
-        $order = ' ORDER BY dates_exp';} 
+        $order = ' ORDER BY dates_training';} 
 	if($_GET['order'] == 'asc'){
         $order.= ' ASC';}
 	elseif($_GET['order'] == 'desc'){
@@ -37,22 +38,14 @@ if(isset($_GET['id_training'])) { // on récupère ce que je supprime dans l'url
 
     header("location: formations.php");
 } // ferme le if isset pour la suppression
+
+require_once 'inc/haut.inc.php';
+
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Admin : les formations</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-    <body>
-<div class="container">
-    <h1>Les Formations :</h1>
+
+<div class="container"><br><br><br>
+    <h1>Formations :</h1>
         <?php
              //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
             $sql = $pdoCV -> prepare("SELECT * FROM t_trainings".$order);
@@ -62,7 +55,6 @@ if(isset($_GET['id_training'])) { // on récupère ce que je supprime dans l'url
     <div>
     
     <table class="table table-striped">
-    <caption>La liste des formations : <?php echo $nbr_trainings; ?></caption>
         <thead>
             <tr>
                 <th>Dates <a href="formations.php?column=dates_trainings&order=asc">ASC</a> | <a href="formations.php?column=dates_trainings&order=desc">DESC</a></th>
@@ -78,45 +70,46 @@ if(isset($_GET['id_training'])) { // on récupère ce que je supprime dans l'url
             {
         ?> 
             <tr>
-                <td><?php echo $line_training['id_training']; ?></td>
                 <td><?php echo $line_training['dates_training']; ?></td>
                 <td><?php echo $line_training['title_training']; ?></td>
                 <td><?php echo $line_training['subtitle_training']; ?></td>
                 <td><?php echo $line_training['training_establishment']; ?></td>
-                <td><a href="modif_formation.php?id_training=<?php echo $line_training['id_training']; ?>">Modifier</a>
+                <td><a href="modif_formation.php?id_training=<?php echo $line_training['id_training']; ?>">Modifier</a> |
                 <a href="formations.php?id_training=<?php echo $line_training['id_training']; ?>">Supprimer</a></td>
-            </tr>
+            </tr><br><br>
+
             <?php 
                 }
             ?>
         </tbody>
+        <caption><em>La liste des formations : <?php echo $nbr_trainings; ?></em></caption>
     </table>
     </div>
-    <hr>
-    <form class="input-group mb-3 mt-4" action="formations.php" method="post">
+    <!-- <hr> -->
+    <form action="formations.php" method="post">
 
         <div class="form-group">
-            <label for="dates_traning">Dates </label>
-            <input type="text" name="dates_traning" id="dates_training" placeholder="Date" required>
+            <label for="dates_training">Dates </label>
+            <input class="form-control" type="text" name="dates_training" id="dates_training" placeholder="Date" required>
         </div>
 
         <div class="form-group">
             <label for="title_training">Titre de la formation </label>
-            <input type="text" name="title_training" id="title_training" placeholder="Titre de la formation" required>
+            <input class="form-control" type="text" name="title_training" id="title_training" placeholder="Titre de la formation" required>
         </div>
 
         <div class="form-group">
-            <label for=sub"title_training">Sous-titre de la formation </label>
-            <input type="text" name="subtitle_training" id="subtitle_training" placeholder="Sous-titre de la formation" required>
+            <label for="subtitle_training">Sous-titre de la formation </label>
+            <input class="form-control" type="text" name="subtitle_training" id="subtitle_training" placeholder="Sous-titre de la formation" required>
         </div>
 
-        <div class="input-group-prepend form-group">        
-            <label class="input-group-text" for="training_establishment">Etablissement de formation</label>
-            <textarea name="training_establishment" id="training_establishment" cols="30" rows="10"></textarea>
+        <div class="form-group">        
+            <label for="training_establishment">Etablissement de formation</label>
+            <input class="form-control" type="text" name="training_establishment" id="training_establishment" placeholder="Etablissement de formation">
         </div>
 
         <div class="form-group">
-            <button class="btn btn-secondary" type="submit">Insérer une formation</button>
+            <button class="btn btn-secondary form-control" type="submit">Insérer une formation</button>
         </div>
     </form>
 </div>  

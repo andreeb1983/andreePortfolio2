@@ -1,67 +1,60 @@
-<?php require_once ('init.inc.php'); ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-
     <meta charset="utf-8">
-   
-	<title>Andrée Baptiste | Dé</title>
+	<title>Andrée Baptiste | Développeur Intégrateur Web</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Custom Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/mystyle-admin.css">
+    <!-- <link href="css/stylish-portfolio.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
+
 	<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
         <!-- La marque -->
-       <a class="navbar-brand" href="<?php echo RACINE_SITE . 'back.php'; ?>">Mon site CV</a>
+       <a class="navbar-brand" href="<?php echo RACINE_SITE ?>">Mon site CV</a>
        
         <!-- Le burger -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        
         <!-- Le menu -->
         <div class="collapse navbar-collapse" id="nav1">
-	<ul class="navbar-nav ml-auto">
-	<?php
-		echo '<li><a class="nav-link" href="'. RACINE_SITE . 'back.php';">Boutique</a></li>';
+	        <ul class="navbar-nav ml-auto">
+	            <?php
 
-        // menu si internaute connecté :
-        if (internauteEstConnecte()) {
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'profil.php">Profil</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php?action=deconnexion">Se déconnecter</a></li>';
-        } else {  // si il n'est pas connecté
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'inscription.php">Inscription</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php">Connexion</a></li>';
-        }   
+                    // menu si internaute connecté :
+                    if (internauteEstConnecte()) {
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php?action=deconnexion">Se déconnecter</a></li>';                    
+                    }   
 
-        // menu si internaute est un admin :
-        if (internauteEstConnecteEtAdmin()) {
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'admin/gestion_boutique.php">Gestion de la boutique</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'admin/gestion_membre.php">Gestion des membres</a></li>';
-
-        }  
-        	?>
-        	</ul>
+                    // menu si internaute est un admin :
+                    if (internauteEstConnecteEtAdmin()) {
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'profil.php">Profil</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'competences.php">Compétences</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'formations.php">Formations</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'experiences.php">Expériences pro</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'loisirs.php">Loisirs</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'reseaux.php">Réseaux</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'messages.php">Messages</a></li>';
+                    }  
+        	        ?>
+        	    </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
    
-    <!-- Page Content -->
-    <div class="container" style="min-height: 80vh;">
-        <!-- ici nous aurons le contenu spécifique de notre page -->
-
     

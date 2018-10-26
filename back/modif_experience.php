@@ -1,13 +1,14 @@
-<?php require 'connexion.php';
+<?php require 'inc/init.inc.php';
 
 // (UPDATE) gestion de la mise à jour d'une information
 if(isset($_POST['dates_exp'])){
 
     $dates_exp = addslashes($_POST['dates_exp']);
     $function_exp = addslashes($_POST['function_exp']);
-    $description_exp= addslashes($_POST['description_exp']);
+    $description_exp = addslashes($_POST['description_exp']);
+    $id_experience = addslashes($_POST['id_experience']);
 
-    $pdoCV -> exec("INSERT INTO t_experiences VALUES (NULL, '$dates_exp', '$function_exp', '$description_exp', '1')");
+    $pdoCV -> exec(" UPDATE t_experiences SET dates_exp ='$dates_exp', function_exp ='$function_exp', description_exp ='$description_exp' WHERE id_experience='$id_experience'");
 
     header("location: experiences.php");
     exit();

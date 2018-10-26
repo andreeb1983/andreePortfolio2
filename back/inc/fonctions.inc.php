@@ -8,7 +8,6 @@ function debug($param) {
     echo '</pre>';
 }
 
- 
 //-------------------- fonctions membres ---------------------
 
 // Fonction qui indique si l'internaute est connecté :
@@ -22,7 +21,6 @@ function internauteEstConnecte() {
     return (isset($_SESSION['t_users']));
 }
 
-
 // Fonction qui indique si le membre est admin connecté :
 function internauteEstConnecteEtAdmin() {
     if (internauteEstConnecte() && $_SESSION['t_users']['statut'] == 1 ) {  // si t_users connecté ET que son statut dans la session vaut 1, il est admin connecté
@@ -34,7 +32,6 @@ function internauteEstConnecteEtAdmin() {
     // OU :
     return (internauteEstConnecte() && $_SESSION['t_users']['statut'] == 1);
 }
-
 
 //-------------------------------- fonction de requête ---------------------------
 function executeRequete($req, $param = array()) {  // cette fonction attend 2 valeurs : une requête SQL obligatoire et un array qui associe les marqueurs aux valeurs(non obligatoire car on a affecté au paramètre $param un array() vide par défaut)
@@ -51,8 +48,5 @@ global $pdoCV;  // permet d'avoir accès à la variable $pdoCV définie dans l'e
 $result = $pdoCV->prepare($req);  // on prépare la requête envoyée à notre fonction
 $result->execute($param);  // on exécute la requête en lui donnant l'array présent dans $param qui associe tous les marqueurs à leur valeur
 return $result;  // on retourne le résultat de la requête de SELECT
-
-
-
 
 }

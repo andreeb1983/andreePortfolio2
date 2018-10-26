@@ -1,4 +1,4 @@
-<?php require 'connexion.php';
+<?php require 'inc/init.inc.php';
 
 // (UPDATE) gestion de la mise à jour d'une information
 if(isset($_POST['skill'])){
@@ -37,56 +37,57 @@ $line_skill = $sql -> fetch(); //
     
     <!-- mise à jour formulaire -->
 <form action="modif_competence.php" method="post">
-    <div class="">
+    <div class="form-group">
         <label for="skill">Compétence</label>
-        <input type="text" name="skill" id="skill" value="<?php echo $line_skill['skill']; ?>" required>        
+        <input class="form-control" type="text" name="skill" id="skill" value="<?php echo $line_skill['skill']; ?>" required>        
     </div>
    
-    <div class="">
-        <label for="skill">Niveau</label>
-        <input type="text" name="level" id="level" value="<?php echo $line_skill['level']; ?>" required>
-        
+    <div class="form-group">
+        <label for="level">Niveau</label>
+        <input class="form-control" type="text" name="level" id="level" value="<?php echo $line_skill['level']; ?>" required>        
     </div>
     
-    <div class="">
-        <div class="">        
-        <label for="category">
-        
-        Catégorie</label>
-        <select name="category" id="category">
+    <div class="form-group">       
+        <label for="category">Catégorie</label>
+        <select name="category" id="category" class="form-control">
             <option value="back"
                 <?php // pour ajouter selected="selected" à la balise d'option si c'est la catégorie de la compétence
                     if(!(strcmp("back", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
                         echo "selected=\"selected\"";
                     }
-                ?>>            
-            back</option>
-            <option value="cms framework"
+                ?>>back</option>
+
+            <option value="cms"
             <?php // pour ajouter selected="selected" à la balise d'option si c'est la catégorie de la compétence
-                    if(!(strcmp("cms framework", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
+                    if(!(strcmp("cms", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
                         echo "selected=\"selected\"";
                     }
-                ?>>            
-            cms framework</option>
+                ?>>cms</option>
+
+            <option value="framework"
+            <?php // pour ajouter selected="selected" à la balise d'option si c'est la catégorie de la compétence
+                    if(!(strcmp("framework", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
+                        echo "selected=\"selected\"";
+                    }
+                ?>>framework</option>
+
             <option value="front"
             <?php // pour ajouter selected="selected" à la balise d'option si c'est la catégorie de la compétence
                     if(!(strcmp("front", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
                         echo "selected=\"selected\"";
                     }
-                ?>>            
-            front</option>           
+                ?>>front</option>         
            
-            <option value="project management"
+            <option value=langue"
             <?php // pour ajouter selected="selected" à la balise d'option si c'est la catégorie de la compétence
-                    if(!(strcmp("project management", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
+                    if(!(strcmp("langue", $line_skill['category']))){ //strcmp compare deux chaîne de caractères
                         echo "selected=\"selected\"";
                     }
-                ?>>            
-            project management</option>
+                ?>>langue</option>
         </select>
     </div>       
     </div>
-    <div class="">
+    <div class="form-group">
     <input type="hidden" name="id_skill" value="<?php echo $line_skill['id_skill']; ?>"> 
     <button type="submit">Mise à jour</button>       
     </div>

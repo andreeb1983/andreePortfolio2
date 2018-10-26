@@ -7,7 +7,7 @@
 */
 
 // connexion à la BDD
-$pdo = new PDO('mysql:host=localhost;dbname=andree_portfolio',   
+$pdoCV = new PDO('mysql:host=localhost;dbname=andree_portfolio',   
                 'root',    
                 '',    
                 array(PDO::ATTR_ERRMODE  => PDO::ERRMODE_WARNING,   
@@ -15,15 +15,16 @@ $pdo = new PDO('mysql:host=localhost;dbname=andree_portfolio',
             );
 
 // créer ou ouvrir une sessoin
-// session_start();
+session_start();
 
 //définir le chemin absolu du site (comme dans wordpress)
 define('RACINE_SITE', '/andreePortfolio2/back/');   // cette constante servira à créer les URL ou chemins absolus utilisés dans haut.inc.php car ce fichier sera inclus dans des scripts qui se situent dans des dossiers différents du site. On ne peut donc pas fair e de chemin relatif dans ce fichier.
 
 // Variables d'affichage : 
-// $contenu = '';
+$contenu = '';
 // $contenu_gauche ='';
 // $contenu_droite ='';
 
 // inclusion du fichier fonctions.inc.php :
-// require_once ('fonctions.inc.php');
+ require_once ('fonctions.inc.php');
+ ?>

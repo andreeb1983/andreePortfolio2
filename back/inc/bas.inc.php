@@ -1,18 +1,15 @@
-</div><!-- fin .container -->
+<!-- Footer -->
+<footer class="page-footer font-small">
 
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-5">
+    <p>Copyright &copy; Andrée Baptiste - 2018</p> 
+  </div>
+  <!-- Copyright -->
 
-    <!-- footer -->
-    <div class="container">
-        <hr>
-        <footer>
-           <div class="row">
-               <div class="col-lg-12">
-                    <p>Copyright &copy; Mon site CV - 2018</p>                   
-               </div> 
-           </div>
-        </footer>
-    </div>
-    <!-- fin footer -->
+</footer>
+<!-- Footer -->
 
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<?php require 'connexion.php'; 
+<?php require 'inc/init.inc.php'; 
 
 // insertion d'une compétence
 if(isset($_POST['skill'])) { // si on a reçu une nouvelle compétence
@@ -7,6 +7,7 @@ if(isset($_POST['skill'])) { // si on a reçu une nouvelle compétence
         $skill = addslashes($_POST['skill']);
         $level = addslashes($_POST['level']);
         $category = addslashes($_POST['category']);
+
         $pdoCV -> exec("INSERT INTO t_skills VALUES (NULL, '$skill', '$level', '$category', '1')");
 
         header("location: competences.php");
@@ -40,22 +41,14 @@ if(isset($_GET['id_skill'])) { // on récupère ce que je supprime dans l'url pa
 
     header("location: competences.php");
 } // ferme le if isset pour la suppression
+
+require_once 'inc/haut.inc.php';
+
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Admin : les compétences</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-    <body>
-<div class="container">
-    <h1>Les compétences :</h1>
+
+<div class="container"><br><br><br>
+    <h1>Compétences :</h1>
         <?php
              //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
             $sql = $pdoCV -> prepare("SELECT * FROM t_skills".$order);
@@ -92,29 +85,28 @@ if(isset($_GET['id_skill'])) { // on récupère ce que je supprime dans l'url pa
             ?>
         </tbody>
     </table>
-    </div>
-    <hr>
-    <form class="input-group mb-3 mt-4" action="competences.php" method="post">
+    <!-- <hr> -->
+    <form action="competences.php" method="post">
         <div class="form-group">
             <label for="skill">Compétence </label>
-            <input type="text" name="skill" id="skill" placeholder="Nouvelle compétence" required>
+            <input class="form-control" type="text" name="skill" id="skill" placeholder="Nouvelle compétence" required>
         </div>
         <div class="form-group">
             <label for="level">Niveau </label>
-            <input type="text" name="level" id="level" placeholder="Niveau en %" required>
+            <input class="form-control" type="text" name="level" id="level" placeholder="Niveau en %" required>
         </div>
-        <div class="input-group-prepend form-group">        
-            <label class="input-group-text" for="category">Catégorie</label>
+        <div class="form-group">        
+            <label for="category">Catégorie</label>
             <select class="custom-select" name="category" id="category">
                 <option selected>Choisis...</option>
                 <option value="front">Front</option>
                 <option value="back">Back</option>
-                <option value="cms framework">CMS / Framework</option>
-                <option value="project management">Project management</option>
+                <option value="cms">CMS</option>
+                <option value="framework">Framework</option>
             </select>
         </div>
         <div class="form-group">
-            <button class="btn btn-secondary" type="submit">Insérer une compétence</button>
+            <button class="btn btn-secondary form-control" type="submit">Insérer une compétence</button>
         </div>
     </form>
 </div>  

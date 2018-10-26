@@ -1,4 +1,4 @@
-<?php require 'connexion.php';
+<?php require 'inc/init.inc.php';
 
 // gestion de la mise à jour d'une information
 if(isset($_POST['hobby'])){
