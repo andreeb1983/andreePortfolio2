@@ -29,7 +29,7 @@ require_once 'inc/haut.inc.php';
 
 
 <div class="container"><br><br><br>
-    <h1>Mes loisirs :</h1>
+    <h1>Loisirs :</h1>
         <?php
              //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
             $sql = $pdoCV -> prepare("SELECT * FROM t_hobbies");
@@ -72,5 +72,6 @@ require_once 'inc/haut.inc.php';
         </div>
     </form>
 </div>  
-</body>
-</html>
+
+<?php
+require_once 'inc/bas.inc.php';

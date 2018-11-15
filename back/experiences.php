@@ -68,7 +68,7 @@ require_once 'inc/haut.inc.php';
             {
         ?> 
             <tr>
-                <td><?php echo $line_experience['id_experience']; ?></td>
+                <td><?php echo $line_experience['dates_exp']; ?></td>
                 <td><?php echo $line_experience['function_exp']; ?></td>
                 <td><?php echo $line_experience['description_exp']; ?></td>
                 <td><a href="modif_experience.php?id_experience=<?php echo $line_experience['id_experience']; ?>">Modifier</a> |
@@ -80,7 +80,7 @@ require_once 'inc/haut.inc.php';
         </tbody>
         <caption><em>La liste des expériences : <?php echo $nbr_experiences; ?></em></caption>
     </table>
-    </div><br><br>
+    </div><br>
     <!-- <hr> -->
     <form action="experiences.php" method="post">
 
@@ -96,7 +96,7 @@ require_once 'inc/haut.inc.php';
 
         <div class="form-group">        
             <label class="input-group-text" for="description_exp">Description</label>
-            <textarea class="form-control" name="description_exp" id="description_exp" cols="30" rows="10"></textarea>
+            <textarea class="form-control" name="description_exp" id="description_exp" cols="30" rows="3"></textarea>
         </div>
 
         <div class="form-group">
@@ -104,5 +104,6 @@ require_once 'inc/haut.inc.php';
         </div>
     </form>
 </div>  
-</body>
-</html>
+
+<?php
+require_once 'inc/bas.inc.php';

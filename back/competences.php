@@ -110,5 +110,6 @@ require_once 'inc/haut.inc.php';
         </div>
     </form>
 </div>  
-</body>
-</html>
+
+<?php
+require_once 'inc/bas.inc.php';

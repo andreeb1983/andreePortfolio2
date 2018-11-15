@@ -14,7 +14,7 @@ extract($_SESSION['t_users']);  // extrait tous les indices de l'array sous form
 //---------------------- AFFICHAGE --------------------------
 require_once 'inc/haut.inc.php';
 ?>
-    <h2 class="mt-5 mb-4 text-center text-dark"><strong><?php echo $comments . ' : ' .  $firstname; ?></strong></h2>
+    <h2 class="mt-5 mb-4 text-center text-dark marge"><strong class="mt-5"><?php echo $comments . ' : ' .  $firstname; ?></strong></h2>
       
     <div class="card mx-auto" style="width: 18rem;">
 

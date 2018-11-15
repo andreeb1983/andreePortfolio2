@@ -20,10 +20,10 @@
 <body>
 
 	<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark text-light navbar-expand-lg" style="background-color: #0E2A53;">
       <div class="container-fluid">
         <!-- La marque -->
-       <a class="navbar-brand" href="<?php echo RACINE_SITE ?>">Mon site CV</a>
+       <a class="navbar-brand" href="<?php echo RACINE_SITE ?>">Andrée Baptiste</a>
        
         <!-- Le burger -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +35,7 @@
 	        <ul class="navbar-nav ml-auto">
 	            <?php
 
-                    // menu si internaute connecté :
-                    if (internauteEstConnecte()) {
-                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php?action=deconnexion">Se déconnecter</a></li>';                    
-                    }   
-
+                   
                     // menu si internaute est un admin :
                     if (internauteEstConnecteEtAdmin()) {
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'profil.php">Profil</a></li>';
@@ -48,8 +44,12 @@
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'experiences.php">Expériences pro</a></li>';
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'loisirs.php">Loisirs</a></li>';
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'reseaux.php">Réseaux</a></li>';
-                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'messages.php">Messages</a></li>';
                     }  
+
+                    // menu si internaute connecté :
+                     if (internauteEstConnecte()) {
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php?action=deconnexion">Se déconnecter</a></li>';                    
+                    }   
         	        ?>
         	    </ul>
             </div>
