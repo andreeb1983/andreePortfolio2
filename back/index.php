@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Andrée Baptiste | Développeur & Intégrateur Web</title>
+    <title style="font-size: 9vh;">Andrée Baptiste | Développeur & Intégrateur Web</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,16 +48,12 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#cv">CV</a>
+          <a class="js-scroll-trigger" href="admin/AndreeB_Int_Dev.pdf target="_blank">CV</a>
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#experiences">Expériences</a>
+          <a class="js-scroll-trigger" href="#parcours">Parcours</a>
         </li>        
-
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#formations">Formations</a>
-        </li>
 
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#loisirs">Loisirs</a>
@@ -94,42 +90,49 @@
 
   <div class="row">
     <div class="col-md-6">    
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">HTML5</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div> <!-- fin div progress -->
 
-      <h3 class="progressbar-title">HTML5</h3>
+      <h3 class="progressbar-title">JavaScript</h3>
       <div class="progress">
         <div class="progress-bar" style="width:90%; background:#f0ad4e;">
           <div class="progress-value">90%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">WordPress</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">Bootstrap 4</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
                       
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">Ajax</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
                       
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">GitHub</h3>
+      <div class="progress">
+        <div class="progress-bar" style="width:75%; background:#ed687c;">
+          <div class="progress-value">75%</div>
+        </div>
+      </div>
+
+      <h3 class="progressbar-title">Anglais</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
@@ -137,7 +140,6 @@
       </div>
 
     </div>
-
     
     <div class="col-md-6">
 
@@ -148,35 +150,42 @@
         </div>
       </div> 
 
-      <h3 class="progressbar-title">HTML5</h3>
+      <h3 class="progressbar-title">JQuery</h3>
       <div class="progress">
         <div class="progress-bar" style="width:90%; background:#f0ad4e;">
           <div class="progress-value">90%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">PHP7</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">PhpMyAdmin</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">MySQL</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
         </div>
       </div>
 
-      <h3 class="progressbar-title">CSS3</h3>
+      <h3 class="progressbar-title">Symfony 3.4</h3>
+      <div class="progress">
+        <div class="progress-bar" style="width:75%; background:#ed687c;">
+          <div class="progress-value">75%</div>
+        </div>
+      </div>
+
+      <h3 class="progressbar-title">Espagnol</h3>
       <div class="progress">
         <div class="progress-bar" style="width:75%; background:#ed687c;">
           <div class="progress-value">75%</div>
@@ -186,32 +195,19 @@
     </div>
 
   </div> <!-- fin div row --> 
-
-  <div class="row anglais">
-    <div class="col-md-12">
-      <h3 class="progressbar-title">Anglais</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>    
-    </div>   
-
-  </div> 
-
-
   <!-- http://bestjquery.com/tutorial/progress-bar/demo34/    -->
-            
-    <div class="col-md-6">
+
+  <div class="row">         
+    <div class="col-md-12 col-md-offset-3">
         <p class="lead mb-5">Forte d'expériences multiples et variées je suis l'atout manquant à votre équipe.
         <!-- <a href="https://unsplash.com/">Unsplash</a>!--></p> 
-        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#cv">Mon CV</a>
+        <a class="btn btn-dark btn-xl js-scroll-trigger" href="admin/AndreeB_Int_Dev.pdf" target="_blank">Mon CV</a>
     </div>
+  </div> 
 
         </div>
       </div>
     </section>
-
 
     <!-- Callout -->
     <section class="callout">
@@ -269,8 +265,7 @@
           <div class="content-section-heading">
             <!-- <h3 class="text-secondary mb-0">Services</h3> -->
             <h2 class="mb-5">Contactez-moi :</h2>
-              <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-              matter of hours to help you.</p>
+              <p class="text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à me contacter. Je  vous recontacterai dans les plus brefs délais.</p>
           </div>
           <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
