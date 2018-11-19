@@ -48,7 +48,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="admin/AndreeB_Int_Dev.pdf target="_blank">CV</a>
+          <a class="js-scroll-trigger" href="admin/AndreeB_Int_Dev.pdf" target="_blank">CV</a>
         </li>
 
         <li class="sidebar-nav-item">
