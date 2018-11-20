@@ -92,7 +92,7 @@ require_once 'inc/haut.inc.php';
             <input class="form-control" type="text" name="skill" id="skill" placeholder="Nouvelle compétence" required>
         </div>
         <div class="form-group">
-            <label for="level">Niveau </label>
+            <label for="level">Niveau en %</label>
             <input class="form-control" type="text" name="level" id="level" placeholder="Niveau en %" required>
         </div>
         <div class="form-group">        
@@ -103,6 +103,7 @@ require_once 'inc/haut.inc.php';
                 <option value="back">Back</option>
                 <option value="cms">CMS</option>
                 <option value="framework">Framework</option>
+                <option value="langue">Langue</option>
             </select>
         </div>
         <div class="form-group">

@@ -23,7 +23,7 @@
     <nav class="navbar navbar-dark text-light navbar-expand-lg" style="background-color: #0E2A53;">
       <div class="container-fluid">
         <!-- La marque -->
-       <a class="navbar-brand" href="<?php echo RACINE_SITE ?>">Andrée Baptiste</a>
+       <a class="navbar-brand" href="<?php echo RACINE_SITE ?>" target="_blank">Andrée Baptiste</a>
        
         <!-- Le burger -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
