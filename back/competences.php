@@ -54,6 +54,7 @@ require_once 'inc/haut.inc.php';
             $sql = $pdoCV -> prepare("SELECT * FROM t_skills".$order);
             $sql -> execute();
             $nbr_skills = $sql -> rowCount();
+            //var_dump($_POST);
         ?>
     <div>
     

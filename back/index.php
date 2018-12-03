@@ -88,114 +88,194 @@
 
 <div class="container">
 
+  <?php
+    //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+    $resultat = $pdoCV->query("SELECT * FROM t_skills");
+    // debug($resultat);
+    $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+    //var_dump($_POST);
+    // debug($donnees);
+  ?>
+
   <div class="row">
-    <div class="col-md-6">    
-      <h3 class="progressbar-title">HTML5</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div> <!-- fin div progress -->
+    <div class="col-md-6"> 
 
-      <h3 class="progressbar-title">JavaScript</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:90%; background:#f0ad4e;">
-          <div class="progress-value">90%</div>
+      <h3 class="progress-title"><?php echo $donnees[0]['skill'];?></h3>
+        <div class="progress">
+          <div class="progress1">
+            <div class="progress-bar" style="width: <?php echo $donnees[0]['level']?>%; background: #008080;">
+              <div class="progress-value"><?php echo $donnees[0]['level']?>%</div>
+            </div>
+          </div>
+          <div class="progress2">
+            <div class="progress-bar2" style="width:<?php echo $donnees[0]['level']?>%; background: #00a79c;"></div>
+          </div>
         </div>
-      </div>
+ 
+        <h3 class="progress-title"><?php echo $donnees[1]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[1]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[1]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[1]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
+        
+        <h3 class="progress-title"><?php echo $donnees[2]['skill'];?></h3>
+        <div class="progress">
+          <div class="progress1">
+            <div class="progress-bar" style="width: <?php echo $donnees[2]['level']?>%; background: #008080;">
+              <div class="progress-value"><?php echo $donnees[2]['level']?>%</div>
+            </div>
+          </div>
+          <div class="progress2">
+            <div class="progress-bar2" style="width:<?php echo $donnees[2]['level']?>%; background: #ff794a;"></div>
+          </div>
+        </div>
 
-      <h3 class="progressbar-title">WordPress</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+        <h3 class="progress-title"><?php echo $donnees[3]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[3]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[3]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[3]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">Bootstrap 4</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
-                      
-      <h3 class="progressbar-title">Ajax</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
-                      
-      <h3 class="progressbar-title">GitHub</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+          <h3 class="progress-title"><?php echo $donnees[4]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[4]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[4]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[4]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">Anglais</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+          <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[6]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[6]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-    </div>
+          <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[6]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[6]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
+
+    </div><!-- fin div class -->
     
-    <div class="col-md-6">
+    <div class="col-md-6">      
 
-      <h3 class="progressbar-title">CSS3</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
+      <h3 class="progress-title"><?php echo $donnees[7]['skill'];?></h3>
+        <div class="progress">
+          <div class="progress1">
+            <div class="progress-bar" style="width: <?php echo $donnees[7]['level']?>%; background: #00a79c;">
+              <div class="progress-value"><?php echo $donnees[7]['level']?>%</div>
+            </div>
+          </div>
+          <div class="progress2">
+            <div class="progress-bar2" style="width:<?php echo $donnees[7]['level']?>%; background: #00a79c;"></div>
+          </div>
         </div>
-      </div> 
-
-      <h3 class="progressbar-title">JQuery</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:90%; background:#f0ad4e;">
-          <div class="progress-value">90%</div>
+ 
+        <h3 class="progress-title"><?php echo $donnees[8]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[8]['level']?>%; background: #ff794a;">
+                <div class="progress-value"><?php echo $donnees[8]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[8]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
+        
+        <h3 class="progress-title"><?php echo $donnees[9]['skill'];?></h3>
+        <div class="progress">
+          <div class="progress1">
+            <div class="progress-bar" style="width: <?php echo $donnees[9]['level']?>%; background: #ff794a;">
+              <div class="progress-value"><?php echo $donnees[9]['level']?>%</div>
+            </div>
+          </div>
+          <div class="progress2">
+            <div class="progress-bar2" style="width:<?php echo $donnees[9]['level']?>%; background: #ff794a;"></div>
+          </div>
         </div>
-      </div>
 
-      <h3 class="progressbar-title">PHP7</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+        <h3 class="progress-title"><?php echo $donnees[10]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[10]['level']?>%; background: #ff794a;">
+                <div class="progress-value"><?php echo $donnees[10]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[10]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">PhpMyAdmin</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+          <h3 class="progress-title"><?php echo $donnees[11]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[11]['level']?>%; background: #ff794a;">
+                <div class="progress-value"><?php echo $donnees[11]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[11]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">MySQL</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+          <h3 class="progress-title"><?php echo $donnees[12]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[12]['level']?>%; background: #ff794a;">
+                <div class="progress-value"><?php echo $donnees[12]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[12]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">Symfony 3.4</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
+          <h3 class="progress-title"><?php echo $donnees[13]['skill'];?></h3>
+          <div class="progress">
+            <div class="progress1">
+              <div class="progress-bar" style="width: <?php echo $donnees[13]['level']?>%; background: #ff794a;">
+                <div class="progress-value"><?php echo $donnees[13]['level']?>%</div>
+              </div>
+            </div>
+            <div class="progress2">
+              <div class="progress-bar2" style="width:<?php echo $donnees[13]['level']?>%; background: #ff794a;"></div>
+            </div>
+          </div>
 
-      <h3 class="progressbar-title">Espagnol</h3>
-      <div class="progress">
-        <div class="progress-bar" style="width:75%; background:#ed687c;">
-          <div class="progress-value">75%</div>
-        </div>
-      </div>
-
-    </div>
+    </div><!-- fin div class -->
 
   </div> <!-- fin div row --> 
-  <!-- http://bestjquery.com/tutorial/progress-bar/demo34/    -->
+  <!-- http://bestjquery.com/tutorial/progress-bar/demo39/    -->
 
   <div class="row">         
     <div class="col-md-12 col-md-offset-3">
