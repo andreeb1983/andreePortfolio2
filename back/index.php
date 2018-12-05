@@ -106,10 +106,7 @@
             <div class="progress-bar" style="width: <?php echo $donnees[0]['level']?>%; background: #008080;">
               <div class="progress-value"><?php echo $donnees[0]['level']?>%</div>
             </div>
-          </div>
-          <div class="progress2">
-            <div class="progress-bar2" style="width:<?php echo $donnees[0]['level']?>%; background: #00a79c;"></div>
-          </div>
+          </div>          
         </div>
  
         <h3 class="progress-title"><?php echo $donnees[1]['skill'];?></h3>
@@ -118,10 +115,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[1]['level']?>%; background: #008080;">
                 <div class="progress-value"><?php echo $donnees[1]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[1]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>            
           </div>
         
         <h3 class="progress-title"><?php echo $donnees[2]['skill'];?></h3>
@@ -130,10 +124,7 @@
             <div class="progress-bar" style="width: <?php echo $donnees[2]['level']?>%; background: #008080;">
               <div class="progress-value"><?php echo $donnees[2]['level']?>%</div>
             </div>
-          </div>
-          <div class="progress2">
-            <div class="progress-bar2" style="width:<?php echo $donnees[2]['level']?>%; background: #ff794a;"></div>
-          </div>
+          </div>         
         </div>
 
         <h3 class="progress-title"><?php echo $donnees[3]['skill'];?></h3>
@@ -142,10 +133,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[3]['level']?>%; background: #008080;">
                 <div class="progress-value"><?php echo $donnees[3]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[3]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>           
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[4]['skill'];?></h3>
@@ -154,10 +142,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[4]['level']?>%; background: #008080;">
                 <div class="progress-value"><?php echo $donnees[4]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[4]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>           
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
@@ -167,9 +152,7 @@
                 <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
               </div>
             </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[6]['level']?>%; background: #ff794a;"></div>
-            </div>
+            
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
@@ -179,9 +162,7 @@
                 <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
               </div>
             </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[6]['level']?>%; background: #ff794a;"></div>
-            </div>
+            
           </div>
 
     </div><!-- fin div class -->
@@ -191,13 +172,10 @@
       <h3 class="progress-title"><?php echo $donnees[7]['skill'];?></h3>
         <div class="progress">
           <div class="progress1">
-            <div class="progress-bar" style="width: <?php echo $donnees[7]['level']?>%; background: #00a79c;">
+            <div class="progress-bar" style="width: <?php echo $donnees[7]['level']?>%; background: #ff794a;">
               <div class="progress-value"><?php echo $donnees[7]['level']?>%</div>
             </div>
-          </div>
-          <div class="progress2">
-            <div class="progress-bar2" style="width:<?php echo $donnees[7]['level']?>%; background: #00a79c;"></div>
-          </div>
+          </div>         
         </div>
  
         <h3 class="progress-title"><?php echo $donnees[8]['skill'];?></h3>
@@ -206,10 +184,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[8]['level']?>%; background: #ff794a;">
                 <div class="progress-value"><?php echo $donnees[8]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[8]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>           
           </div>
         
         <h3 class="progress-title"><?php echo $donnees[9]['skill'];?></h3>
@@ -218,10 +193,7 @@
             <div class="progress-bar" style="width: <?php echo $donnees[9]['level']?>%; background: #ff794a;">
               <div class="progress-value"><?php echo $donnees[9]['level']?>%</div>
             </div>
-          </div>
-          <div class="progress2">
-            <div class="progress-bar2" style="width:<?php echo $donnees[9]['level']?>%; background: #ff794a;"></div>
-          </div>
+          </div>         
         </div>
 
         <h3 class="progress-title"><?php echo $donnees[10]['skill'];?></h3>
@@ -230,10 +202,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[10]['level']?>%; background: #ff794a;">
                 <div class="progress-value"><?php echo $donnees[10]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[10]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>            
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[11]['skill'];?></h3>
@@ -242,10 +211,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[11]['level']?>%; background: #ff794a;">
                 <div class="progress-value"><?php echo $donnees[11]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[11]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>            
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[12]['skill'];?></h3>
@@ -254,10 +220,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[12]['level']?>%; background: #ff794a;">
                 <div class="progress-value"><?php echo $donnees[12]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[12]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>            
           </div>
 
           <h3 class="progress-title"><?php echo $donnees[13]['skill'];?></h3>
@@ -266,10 +229,7 @@
               <div class="progress-bar" style="width: <?php echo $donnees[13]['level']?>%; background: #ff794a;">
                 <div class="progress-value"><?php echo $donnees[13]['level']?>%</div>
               </div>
-            </div>
-            <div class="progress2">
-              <div class="progress-bar2" style="width:<?php echo $donnees[13]['level']?>%; background: #ff794a;"></div>
-            </div>
+            </div>            
           </div>
 
     </div><!-- fin div class -->
@@ -285,17 +245,73 @@
     </div>
   </div> 
 
-        </div>
+	</div>
       </div>
     </section>
 
     <!-- Callout -->
-    <section class="callout">
-      <div class="container text-center">
-        <h2 class="mx-auto mb-5">Mes expériences professionnelles</h2>
+  <section id="experience" class="callout myexperties">
+    <div class="container text-center">
+      <h2 class="mx-auto mb-5">Mes expériences professionnelles</h2>
 
-        <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
+      <!--Work Experties start -->
+  	<div class="container">
+      <div class="heading">
+      <h2>Work Experience</h2>
+      <h3>My previous associations</h3>        
       </div>
+        
+      <div class="row media">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="expertiesico">
+            Mar,2013<br>Till Date
+          </div>
+        </div>
+        <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+          <h4>UIzards</h4>
+          <h5>Senior UX Designer</h5>
+          <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
+            duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
+            lum sapien sed matti sapien sed mattis.</p>
+        </div>
+      </div>
+      <div class="row media">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="expertiesico">
+            July,2011<br>February 2013
+          </div>
+        </div>
+        <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+          <h4>Lexind</h4>
+            <h5>Senior UX Designer</h5>
+            <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
+              duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
+              lum sapien sed matti sapien sed mattis.</p>
+          </div>
+        </div>
+        <div class="row media">
+        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              September,2019<br>June 2011
+            </div>
+          </div>
+        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Matrix Media</h4>
+              <h5>Senior UX Designer</h5>
+              <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
+                duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
+                lum sapien sed matti sapien sed mattis.</p>
+          </div>
+        </div>
+      </div>
+  <!--Work Experties end -->
+  <!-- http://designstub.com/demos/folio/ -->
+
+      <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
+    </div>
+
+    
+
     </section>
 
     <section class="content-section bg-light" id="formations">
@@ -311,7 +327,7 @@
       </div>
     </section>
 
-
+    <!-- Mes loisirs -->
     </section> -->
     <section class="callout">
       <div class="container text-center">
@@ -339,7 +355,7 @@
       </small>
     </section> -->
 
-        <!-- Services -->
+        <!-- Contactez-moi -->
         <section class="content-section bg-primary text-white text-center" id="contact">
         <div class="container">
           <div class="content-section-heading">
