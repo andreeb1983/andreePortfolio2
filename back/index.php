@@ -317,6 +317,17 @@
 
     <section class="content-section bg-light" id="formations">
       <div class="container text-center">
+
+      <?php
+      //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+      $resultat = $pdoCV->query("SELECT * FROM t_trainings
+      
+      ");
+      // debug($resultat);
+      $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+      //var_dump($_POST);
+      // debug($donnees);
+      ?>
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>Mes formations</h2>
@@ -325,12 +336,12 @@
 
               <div class="row media">
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                  <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
+                  <div class="expertiesico"><?php echo $donnees[1]['dates_training']?><br>.</div>
               </div>
               <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                 <!-- <h4>UIzards</h4> -->
-                <h5><?php echo $donnees[1]['function_exp']?></h5>
-                <p> <?php echo $donnees[1]['description_exp']?></p>
+                <h5><?php echo $donnees[1]['tittle_training']?></h5>
+                <p> <?php echo $donnees[1]['training_establishment']?></p>
               </div>
               </div>
 
