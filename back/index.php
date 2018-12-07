@@ -52,8 +52,12 @@
         </li>
 
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#parcours">Parcours</a>
-        </li>        
+          <a class="js-scroll-trigger" href="#experiences">Expériences pro</a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#formations">Formations</a>
+        </li>  
 
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#loisirs">Loisirs</a>
@@ -145,11 +149,11 @@
             </div>           
           </div>
 
-          <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
+          <h3 class="progress-title"><?php echo $donnees[5]['skill'];?></h3>
           <div class="progress">
             <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[6]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
+              <div class="progress-bar" style="width: <?php echo $donnees[5]['level']?>%; background: #008080;">
+                <div class="progress-value"><?php echo $donnees[5]['level']?>%</div>
               </div>
             </div>
             
@@ -250,57 +254,56 @@
     </section>
 
     <!-- Callout -->
-  <section id="experience" class="callout myexperties">
-    <div class="container text-center">
+  <section id="experiences" class="content-section bg-light callout myexperties">
+    <div class="container text-center"> 
+
+    <?php
+    //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+    $resultat = $pdoCV->query("SELECT * FROM t_experiences");
+    // debug($resultat);
+    $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+    //var_dump($_POST);
+    // debug($donnees);
+    ?>
+
       <h2 class="mx-auto mb-5">Mes expériences professionnelles</h2>
 
       <!--Work Experties start -->
-  	<div class="container">
-      <div class="heading">
-      <h2>Work Experience</h2>
-      <h3>My previous associations</h3>        
-      </div>
+  	
+      <!-- <div class="heading">
+            
+      </div> -->
         
       <div class="row media">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="expertiesico">
-            Mar,2013<br>Till Date
-          </div>
+          <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
         </div>
         <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <h4>UIzards</h4>
-          <h5>Senior UX Designer</h5>
-          <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
-            duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
-            lum sapien sed matti sapien sed mattis.</p>
+          <!-- <h4>UIzards</h4> -->
+          <h5><?php echo $donnees[1]['function_exp']?></h5>
+          <p> <?php echo $donnees[1]['description_exp']?></p>
         </div>
       </div>
+
       <div class="row media">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="expertiesico">
-            July,2011<br>February 2013
-          </div>
+          <div class="expertiesico"><?php echo $donnees[2]['dates_exp']?><br>.</div>
         </div>
         <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <h4>Lexind</h4>
-            <h5>Senior UX Designer</h5>
-            <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
-              duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
-              lum sapien sed matti sapien sed mattis.</p>
+          <!-- <h4>Lexind</h4> -->
+          <h5><?php echo $donnees[2]['function_exp']?></h5>
+          <p><?php echo $donnees[2]['description_exp']?></p>
           </div>
         </div>
+
         <div class="row media">
         	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              September,2019<br>June 2011
-            </div>
+            <div class="expertiesico"><?php echo $donnees[3]['dates_exp']?><br>.</div>
           </div>
         	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Matrix Media</h4>
-              <h5>Senior UX Designer</h5>
-              <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt adipiscing atgfnte varius at. Sed mollis vestibulum sapien sed mattis.Cras dictum tellus duvi, vitae sollicitud tyinstfg
-                duvipsum tincidunt adipiscing ante varius at. Sed mollis ves tibulum Sed mollis vestibu
-                lum sapien sed matti sapien sed mattis.</p>
+            <!-- <h4>Matrix Media</h4> -->
+            <h5><?php echo $donnees[3]['function_exp']?></h5>
+            <p><?php echo $donnees[3]['description_exp']?></p>
           </div>
         </div>
       </div>
@@ -308,9 +311,7 @@
   <!-- http://designstub.com/demos/folio/ -->
 
       <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
-    </div>
-
-    
+    </div>    
 
     </section>
 
@@ -319,8 +320,30 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>Mes formations</h2>
-            <p class="lead mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos maxime provident vitae optio rerum eligendi repellendus illum, nihil minima ducimus cum deserunt magnam expedita, libero dolorum. Harum aliquam ipsa praesentium..
-              <!-- <a href="https://unsplash.com/">Unsplash</a>!--></p> 
+            <!-- <p class="lead mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos maxime provident vitae optio rerum eligendi repellendus illum, nihil minima ducimus cum deserunt magnam expedita, libero dolorum. Harum aliquam ipsa praesentium..
+              <a href="https://unsplash.com/">Unsplash</a>!</p>  -->
+
+              <div class="row media">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
+              </div>
+              <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <!-- <h4>UIzards</h4> -->
+                <h5><?php echo $donnees[1]['function_exp']?></h5>
+                <p> <?php echo $donnees[1]['description_exp']?></p>
+              </div>
+              </div>
+
+              <div class="row media">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                  <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
+              </div>
+              <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <!-- <h4>UIzards</h4> -->
+                <h5><?php echo $donnees[1]['function_exp']?></h5>
+                <p> <?php echo $donnees[1]['description_exp']?></p>
+              </div>
+           </div>
             <a class="btn btn-dark btn-xl js-scroll-trigger" href="#loisirs">Mes loisirs</a>
           </div>
         </div>
@@ -328,14 +351,26 @@
     </section>
 
     <!-- Mes loisirs -->
-    </section> -->
-    <section class="callout">
+    </section> 
+    <section class="callout" id="loisirs">
       <div class="container text-center">
-        <h2 class="mx-auto mb-5">Mes loisirs</h2>
 
-        <a class="btn btn-primary btn-xl" href="#contact">Contact</a>
-      </div>
-    </section>
+      <?php
+    //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+    $resultat = $pdoCV->query("SELECT * FROM t_hobbies");
+    // debug($resultat);
+    $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+    //var_dump($_POST);
+    // debug($donnees);
+    ?>
+      
+    <h2 class="mx-auto mb-5">Mes loisirs</h2>
+
+    <a class="btn btn-primary btn-xl" href="#contact">Contact</a>
+        
+
+  </div>
+  </section>
 
     <!-- Call to Action -->
     <!-- <section class="content-section bg-primary text-white">
@@ -355,25 +390,24 @@
       </small>
     </section> -->
 
-        <!-- Contactez-moi -->
-        <section class="content-section bg-primary text-white text-center" id="contact">
-        <div class="container">
-          <div class="content-section-heading">
-            <!-- <h3 class="text-secondary mb-0">Services</h3> -->
-            <h2 class="mb-5">Contactez-moi :</h2>
-              <p class="text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à me contacter. Je  vous recontacterai dans les plus brefs délais.</p>
-          </div>
-          <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          </div>
-          </div>
-        </section>
-        
+    <!-- Contactez-moi -->
+    <section class="content-section bg-primary text-white text-center" id="contact">
+    <div class="container">
+      <div class="content-section-heading">
+        <!-- <h3 class="text-secondary mb-0">Services</h3> -->
+        <h2 class="mb-5">Contactez-moi :</h2>
+          <p class="text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à me contacter. Je  vous recontacterai dans les plus brefs délais.</p>
+      </div>
+      <div class="row">
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+      </div>
+      </div>
+    </section>        
 
 </div> <!-- fin div container -->
 
 </section>
-<
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
