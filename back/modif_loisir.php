@@ -3,10 +3,11 @@
 // gestion de la mise à jour d'une information
 if(isset($_POST['hobby'])){
 
-    $hobby = addslashes($_POST['hobby']);
+    $hobby = addslashes($_POST['hobby']);    
+    $photo = addslashes($_POST['photo']);    
     $id_hobby = $_POST['id_hobby'];
 
-    $pdoCV -> exec(" UPDATE t_hobbies SET hobby='$hobby' WHERE id_hobby='$id_hobby' ");
+    $pdoCV -> exec(" UPDATE t_hobbies SET hobby='$hobby', photo='$photo' WHERE id_hobby='$id_hobby' ");
     header('location:loisirs.php');
     exit();
 }
@@ -37,6 +38,10 @@ $line_hobby = $sql -> fetch(); //
     <div class="">
         <label for="hobby">Loisir</label>
         <input type="text" name="hobby" id="hobby" value="<?php echo $line_hobby['hobby']; ?>" required>
+    </div>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="photo" name="photo" lang="fr">
+        <label class="custom-file-label" for="photo">Selectionner la photo</label>
     </div>
     <div class="">
     <input type="hidden" name="id_hobby" value="<?php echo $line_hobby['id_hobby']; ?>">

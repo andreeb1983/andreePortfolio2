@@ -245,7 +245,7 @@
     <div class="col-md-12 col-md-offset-3">
         <p class="lead mb-5">Forte d'expériences multiples et variées je suis l'atout manquant à votre équipe.
         <!-- <a href="https://unsplash.com/">Unsplash</a>!--></p> 
-        <a class="btn btn-dark btn-xl js-scroll-trigger" href="admin/AndreeB_Int_Dev.pdf" target="_blank">Mon CV</a>
+        <a class="btn btn-dark btn-xl js-scroll-trigger" href="admin/IntegrateurDevWebJunior.pdf" target="_blank">Mon CV</a>
     </div>
   </div> 
 
@@ -406,8 +406,10 @@
     <div class="container">
       <div class="content-section-heading">
         <!-- <h3 class="text-secondary mb-0">Services</h3> -->
-        <h2 class="mb-5">Contactez-moi :</h2>
-          <p class="text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à me contacter. Je  vous recontacterai dans les plus brefs délais.</p>
+          <p class="text-center w-responsive mx-auto mb-5">Andrée Baptiste</p>
+          <p class="text-center w-responsive mx-auto mb-5"></p>
+
+          <a class="btn btn-primary btn-xl" href="#contact">Contactez-moi !</a>
       </div>
       <div class="row">
       <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">

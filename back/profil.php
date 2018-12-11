@@ -35,6 +35,7 @@ if(isset($_POST['firstname'])) {
 
 //---------------------- AFFICHAGE --------------------------
 require_once 'inc/haut.inc.php';
+
 // var_dump($_SESSION);
 ?>
 

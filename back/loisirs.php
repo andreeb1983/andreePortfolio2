@@ -5,7 +5,8 @@ if(isset($_POST['hobby'])) { // si on a reçu un nouveau loisir
     if($_POST['hobby']!="") {
 
         $hobby = addslashes($_POST['hobby']);
-        $pdoCV -> exec("INSERT INTO t_hobbies VALUES (NULL, '$hobby', '1')");
+        $photo = addslashes($_POST['photo']);
+        $pdoCV -> exec("INSERT INTO t_hobbies VALUES (NULL, '$hobby', '$photo', '1')");
 
         header("location: loisirs.php");
             exit();
@@ -41,6 +42,7 @@ require_once 'inc/haut.inc.php';
             <thead>
                 <tr>
                     <th>Loisirs</th>
+                    <th>Photo</th>
                     <th>Modifier</th>
                     <th>Suppression</th>
                 </tr>
@@ -51,6 +53,7 @@ require_once 'inc/haut.inc.php';
             ?> 
                 <tr>
                     <td><?php echo $line_hobby['hobby']; ?></td>
+                    <td><?php echo $line_hobby['photo']; ?></td>
                     <td><a href="modif_loisir.php?id_hobby=<?php echo $line_hobby['id_hobby']; ?>">Modif</a></td>
                     <td><a href="loisirs.php?id_hobby=<?php echo $line_hobby['id_hobby']; ?>">Suppr</a></td>
                 </tr>
@@ -66,6 +69,10 @@ require_once 'inc/haut.inc.php';
         <div class=" form-group ">
             <label for="hobby">Loisir </label>
             <input class="form-control" type="text" name="hobby" id="hobby" placeholder="Nouveau loisir" required>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="photo" name="photo" lang="fr">
+             <label class="custom-file-label" for="photo">Selectionner unregister_tick_function photo</label>
         </div>
         <div class="form-group">
             <button class="btn btn-secondary form-control" type="submit">Insérer un loisir</button>

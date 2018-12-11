@@ -28,7 +28,7 @@ if (!empty($_POST)){
           $contact->insertContact($name, $email, $subject, $comment);
 
           // on appelle la méthode sendEmail()
-          // $contact->sendEmail($name, $email, $subject, $comment); // ne fonctionne pas sur localhost sans un paramétrage spécial
+          $contact->sendEmail($name, $email, $subject, $comment); // ne fonctionne pas sur localhost sans un paramétrage spécial
 
           // on efface les valeurs du formulaire (évite un envoi multiple)
           unset($name);
