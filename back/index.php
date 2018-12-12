@@ -83,280 +83,366 @@
       <div class="overlay"></div>
     </header>
 
-    <!-- About -->
+
+    <!-- Compétences -->
     <section class="content-section bg-light" id="competences">
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>Mes compétences</h2>
+            <h2>Compétences</h2>
 
-<div class="container">
+              <div class="container">
 
-  <?php
-    //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
-    $resultat = $pdoCV->query("SELECT * FROM t_skills");
-    // debug($resultat);
-    $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
-    //var_dump($_POST);
-    // debug($donnees);
-  ?>
+                <?php
+                  //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+                  $resultat = $pdoCV->query("SELECT * FROM t_skills");
+                  // debug($resultat);
+                  $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+                  //var_dump($_POST);
+                  // debug($donnees);
+                ?>
 
-  <div class="row">
-    <div class="col-md-6"> 
+                <div class="row">
+                  <div class="col-md-6"> 
 
-      <h3 class="progress-title"><?php echo $donnees[0]['skill'];?></h3>
-        <div class="progress">
-          <div class="progress1">
-            <div class="progress-bar" style="width: <?php echo $donnees[0]['level']?>%; background: #008080;">
-              <div class="progress-value"><?php echo $donnees[0]['level']?>%</div>
-            </div>
-          </div>          
-        </div>
+                    <h3 class="progress-title"><?php echo $donnees[0]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[0]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[0]['level']?>%</div>
+                          </div>
+                        </div>          
+                      </div>
+              
+                      <h3 class="progress-title"><?php echo $donnees[1]['skill'];?></h3>
+                        <div class="progress">
+                          <div class="progress1">
+                            <div class="progress-bar" style="width: <?php echo $donnees[1]['level']?>%; background: #008080;">
+                              <div class="progress-value"><?php echo $donnees[1]['level']?>%</div>
+                            </div>
+                          </div>            
+                        </div>
+                      
+                      <h3 class="progress-title"><?php echo $donnees[2]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[2]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[2]['level']?>%</div>
+                          </div>
+                        </div>         
+                      </div>
+
+                      <h3 class="progress-title"><?php echo $donnees[3]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[3]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[3]['level']?>%</div>
+                          </div>
+                        </div>           
+                      </div>
+
+                      <h3 class="progress-title"><?php echo $donnees[4]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[4]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[4]['level']?>%</div>
+                          </div>
+                        </div>           
+                      </div>
+
+                      <h3 class="progress-title"><?php echo $donnees[5]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[5]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[5]['level']?>%</div>
+                          </div>
+                        </div>                          
+                      </div>
+
+                      <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
+                      <div class="progress">
+                        <div class="progress1">
+                          <div class="progress-bar" style="width: <?php echo $donnees[6]['level']?>%; background: #008080;">
+                            <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
+                          </div>
+                        </div>                        
+                      </div>
+
+                  </div><!-- fin div class col-md-6-->
+                  
+                  <div class="col-md-6">      
+
+                    <h3 class="progress-title"><?php echo $donnees[7]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[7]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[7]['level']?>%</div>
+                        </div>
+                      </div>         
+                    </div>
+            
+                    <h3 class="progress-title"><?php echo $donnees[8]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[8]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[8]['level']?>%</div>
+                        </div>
+                      </div>           
+                    </div>
+                    
+                    <h3 class="progress-title"><?php echo $donnees[9]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[9]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[9]['level']?>%</div>
+                        </div>
+                      </div>         
+                    </div>
+
+                    <h3 class="progress-title"><?php echo $donnees[10]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[10]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[10]['level']?>%</div>
+                        </div>
+                      </div>            
+                    </div>
+
+                    <h3 class="progress-title"><?php echo $donnees[11]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[11]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[11]['level']?>%</div>
+                        </div>
+                      </div>            
+                    </div>
+
+                    <h3 class="progress-title"><?php echo $donnees[12]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[12]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[12]['level']?>%</div>
+                        </div>
+                      </div>            
+                    </div>
+
+                    <h3 class="progress-title"><?php echo $donnees[13]['skill'];?></h3>
+                    <div class="progress">
+                      <div class="progress1">
+                        <div class="progress-bar" style="width: <?php echo $donnees[13]['level']?>%; background: #ff794a;">
+                          <div class="progress-value"><?php echo $donnees[13]['level']?>%</div>
+                        </div>
+                      </div>            
+                    </div>
+                  </div><!-- fin div class col-md-6-->
+                </div><!-- fin div class -->
+                </div><!-- fin div row -->
  
-        <h3 class="progress-title"><?php echo $donnees[1]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[1]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[1]['level']?>%</div>
-              </div>
-            </div>            
-          </div>
+                <!-- http://bestjquery.com/tutorial/progress-bar/demo39/    -->
+
+                <div class="row">         
+                  <div class="col-md-12 col-md-offset-3">
+                      <p class="lead mb-5">Forte d'expériences multiples et variées je suis l'atout manquant à votre équipe.</p> 
+                      <a class="btn btn-dark btn-xl js-scroll-trigger" href="admin/IntegrateurDevWebJunior.pdf" target="_blank">CV téléchargeable</a>
+                      <a class="btn btn-dark btn-xl js-scroll-trigger" href="#experiences">Expériences</a>
+                  </div><!--fin div class col-md-12 -->
+                </div><!--fin div class row -->
+
+              </div><!-- fin div class container -->
+            </div><!-- fin div col-lg-10 --> 
+          </div><!-- fin div class row -->
+      </div><!-- fin div class container text-center-->
+    </section><!-- fin section -->
+
+
+    <!-- Expériences -->
+    <section class="content-section bg-light callout myexperties" id="experiences" >
+      <div class="container text-center"> 
+
+        <?php
+        //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+        $resultat = $pdoCV->query("SELECT * FROM t_experiences");
+        // debug($resultat);
+        $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+        //var_dump($_POST);
+        // debug($donnees);
+        ?>
+
+          <h2 class="mx-auto mb-5">Expériences pro</h2>
+
+          <div class="container"></div>
         
-        <h3 class="progress-title"><?php echo $donnees[2]['skill'];?></h3>
-        <div class="progress">
-          <div class="progress1">
-            <div class="progress-bar" style="width: <?php echo $donnees[2]['level']?>%; background: #008080;">
-              <div class="progress-value"><?php echo $donnees[2]['level']?>%</div>
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[0]['dates_exp']?><br>.</div>
             </div>
-          </div>         
-        </div>
-
-        <h3 class="progress-title"><?php echo $donnees[3]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[3]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[3]['level']?>%</div>
-              </div>
-            </div>           
-          </div>
-
-          <h3 class="progress-title"><?php echo $donnees[4]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[4]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[4]['level']?>%</div>
-              </div>
-            </div>           
-          </div>
-
-          <h3 class="progress-title"><?php echo $donnees[5]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[5]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[5]['level']?>%</div>
-              </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <!-- <h4>UIzards</h4> -->
+              <h5><?php echo $donnees[0]['function_exp']?></h5>
+              <p> <?php echo $donnees[0]['description_exp']?></p>
             </div>
-            
           </div>
 
-          <h3 class="progress-title"><?php echo $donnees[6]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[6]['level']?>%; background: #008080;">
-                <div class="progress-value"><?php echo $donnees[6]['level']?>%</div>
-              </div>
+          <div class="row media">
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
             </div>
-            
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Lexind</h4> -->
+              <h5><?php echo $donnees[1]['function_exp']?></h5>
+              <p><?php echo $donnees[1]['description_exp']?></p>
+              </div>
           </div>
 
-    </div><!-- fin div class -->
-    
-    <div class="col-md-6">      
-
-      <h3 class="progress-title"><?php echo $donnees[7]['skill'];?></h3>
-        <div class="progress">
-          <div class="progress1">
-            <div class="progress-bar" style="width: <?php echo $donnees[7]['level']?>%; background: #ff794a;">
-              <div class="progress-value"><?php echo $donnees[7]['level']?>%</div>
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[2]['dates_exp']?><br>.</div>
             </div>
-          </div>         
-        </div>
- 
-        <h3 class="progress-title"><?php echo $donnees[8]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[8]['level']?>%; background: #ff794a;">
-                <div class="progress-value"><?php echo $donnees[8]['level']?>%</div>
-              </div>
-            </div>           
-          </div>
-        
-        <h3 class="progress-title"><?php echo $donnees[9]['skill'];?></h3>
-        <div class="progress">
-          <div class="progress1">
-            <div class="progress-bar" style="width: <?php echo $donnees[9]['level']?>%; background: #ff794a;">
-              <div class="progress-value"><?php echo $donnees[9]['level']?>%</div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[2]['function_exp']?></h5>
+              <p><?php echo $donnees[2]['description_exp']?></p>
             </div>
-          </div>         
-        </div>
-
-        <h3 class="progress-title"><?php echo $donnees[10]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[10]['level']?>%; background: #ff794a;">
-                <div class="progress-value"><?php echo $donnees[10]['level']?>%</div>
-              </div>
-            </div>            
           </div>
 
-          <h3 class="progress-title"><?php echo $donnees[11]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[11]['level']?>%; background: #ff794a;">
-                <div class="progress-value"><?php echo $donnees[11]['level']?>%</div>
-              </div>
-            </div>            
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[3]['dates_exp']?><br>.</div>
+            </div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[3]['function_exp']?></h5>
+              <p><?php echo $donnees[3]['description_exp']?></p>
+            </div>
           </div>
 
-          <h3 class="progress-title"><?php echo $donnees[12]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[12]['level']?>%; background: #ff794a;">
-                <div class="progress-value"><?php echo $donnees[12]['level']?>%</div>
-              </div>
-            </div>            
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[4]['dates_exp']?><br>.</div>
+            </div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[4]['function_exp']?></h5>
+              <p><?php echo $donnees[4]['description_exp']?></p>
+            </div>
           </div>
 
-          <h3 class="progress-title"><?php echo $donnees[13]['skill'];?></h3>
-          <div class="progress">
-            <div class="progress1">
-              <div class="progress-bar" style="width: <?php echo $donnees[13]['level']?>%; background: #ff794a;">
-                <div class="progress-value"><?php echo $donnees[13]['level']?>%</div>
-              </div>
-            </div>            
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[5]['dates_exp']?><br>.</div>
+            </div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[5]['function_exp']?></h5>
+              <p><?php echo $donnees[5]['description_exp']?></p>
+            </div>
           </div>
 
-    </div><!-- fin div class -->
-
-  </div> <!-- fin div row --> 
-  <!-- http://bestjquery.com/tutorial/progress-bar/demo39/    -->
-
-  <div class="row">         
-    <div class="col-md-12 col-md-offset-3">
-        <p class="lead mb-5">Forte d'expériences multiples et variées je suis l'atout manquant à votre équipe.
-        <!-- <a href="https://unsplash.com/">Unsplash</a>!--></p> 
-        <a class="btn btn-dark btn-xl js-scroll-trigger" href="admin/IntegrateurDevWebJunior.pdf" target="_blank">Mon CV</a>
-    </div>
-  </div> 
-
-	</div>
-      </div>
-    </section>
-
-    <!-- Callout -->
-  <section id="experiences" class="content-section bg-light callout myexperties">
-    <div class="container text-center"> 
-
-    <?php
-    //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
-    $resultat = $pdoCV->query("SELECT * FROM t_experiences");
-    // debug($resultat);
-    $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
-    //var_dump($_POST);
-    // debug($donnees);
-    ?>
-
-      <h2 class="mx-auto mb-5">Mes expériences professionnelles</h2>
-
-      <!--Work Experties start -->
-  	
-      <!-- <div class="heading">
-            
-      </div> -->
-        
-      <div class="row media">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
-        </div>
-        <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <!-- <h4>UIzards</h4> -->
-          <h5><?php echo $donnees[1]['function_exp']?></h5>
-          <p> <?php echo $donnees[1]['description_exp']?></p>
-        </div>
-      </div>
-
-      <div class="row media">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <div class="expertiesico"><?php echo $donnees[2]['dates_exp']?><br>.</div>
-        </div>
-        <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-          <!-- <h4>Lexind</h4> -->
-          <h5><?php echo $donnees[2]['function_exp']?></h5>
-          <p><?php echo $donnees[2]['description_exp']?></p>
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[6]['dates_exp']?><br>.</div>
+            </div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[6]['function_exp']?></h5>
+              <p><?php echo $donnees[6]['description_exp']?></p>
+            </div>
           </div>
-        </div>
 
-        <div class="row media">
-        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico"><?php echo $donnees[3]['dates_exp']?><br>.</div>
+          <div class="row media">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+              <div class="expertiesico"><?php echo $donnees[7]['dates_exp']?><br>.</div>
+            </div>
+            <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <!-- <h4>Matrix Media</h4> -->
+              <h5><?php echo $donnees[7]['function_exp']?></h5>
+              <p><?php echo $donnees[7]['description_exp']?></p>
+            </div>
           </div>
-        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <!-- <h4>Matrix Media</h4> -->
-            <h5><?php echo $donnees[3]['function_exp']?></h5>
-            <p><?php echo $donnees[3]['description_exp']?></p>
+
+        </div><!-- fin div class container -->
+        <!-- http://designstub.com/demos/folio/ -->
+
+        <div class="row">
+          <div class="col-md-12 col-md-offset-3">
+            <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
           </div>
-        </div>
-      </div>
-  <!--Work Experties end -->
-  <!-- http://designstub.com/demos/folio/ -->
+        </div> 
 
-      <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
-    </div>    
+        </div><!-- fin din class container -->
 
-    </section>
+      </div><!-- fin div container text-center-->   
 
+    </section><!-- fin section --><!-- fin Expériences -->
+
+
+    <!-- Formations-->
     <section class="content-section bg-light" id="formations">
       <div class="container text-center">
 
-      <?php
-      //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
-      $resultat = $pdoCV->query("SELECT * FROM t_trainings
-      
-      ");
-      // debug($resultat);
-      $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
-      //var_dump($_POST);
-      // debug($donnees);
-      ?>
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h2>Mes formations</h2>
-            <!-- <p class="lead mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos maxime provident vitae optio rerum eligendi repellendus illum, nihil minima ducimus cum deserunt magnam expedita, libero dolorum. Harum aliquam ipsa praesentium..
-              <a href="https://unsplash.com/">Unsplash</a>!</p>  -->
+        <?php
+        //requête pour compter et chercher plusieurs enregistrements, on ne peut compter que si on a un prepare
+        $resultat = $pdoCV->query("SELECT * FROM t_trainings
+        
+        ");
+        // debug($resultat);
+        $donnees = $resultat->fetchAll(PDO::FETCH_ASSOC);
+        //var_dump($_POST);
+        // debug($donnees);
+        ?>
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2>Mes formations</h2>
+           
+                <div class="row media">
+                  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="expertiesico"><?php echo $donnees[0]['dates_training']?><br>.</div>
+                </div>
+                <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <!-- <h4>UIzards</h4> -->
+                  <h5><?php echo $donnees[0]['title_training']?></h5>
+                  <h3><?php echo $donnees[0]['subtitle_training']?></h3>
+                  <p> <?php echo $donnees[0]['training_establishment']?></p>
+                </div>
 
-              <div class="row media">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                  <div class="expertiesico"><?php echo $donnees[1]['dates_training']?><br>.</div>
-              </div>
-              <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <!-- <h4>UIzards</h4> -->
-                <h5><?php echo $donnees[1]['tittle_training']?></h5>
-                <p> <?php echo $donnees[1]['training_establishment']?></p>
-              </div>
-              </div>
+                <div class="row media">
+                  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="expertiesico"><?php echo $donnees[1]['dates_training']?><br>.</div>
+                </div>
+                <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <!-- <h4>UIzards</h4> -->
+                  <h5><?php echo $donnees[1]['title_training']?></h5>
+                  <h3><?php echo $donnees[1]['subtitle_training']?></h3>
+                  <p> <?php echo $donnees[1]['training_establishment']?></p>
+                </div>
 
-              <div class="row media">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                  <div class="expertiesico"><?php echo $donnees[1]['dates_exp']?><br>.</div>
-              </div>
-              <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <!-- <h4>UIzards</h4> -->
-                <h5><?php echo $donnees[1]['function_exp']?></h5>
-                <p> <?php echo $donnees[1]['description_exp']?></p>
-              </div>
-           </div>
+                <div class="row media">
+                  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="expertiesico"><?php echo $donnees[2]['dates_training']?><br>.</div>
+                </div>
+                <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <!-- <h4>UIzards</h4> -->
+                  <h5><?php echo $donnees[2]['title_training']?></h5>
+                  <h3><?php echo $donnees[2]['subtitle_training']?></h3>
+                  <p> <?php echo $donnees[2]['training_establishment']?></p>
+                </div>
+
+                <div class="row media">
+                  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                    <div class="expertiesico"><?php echo $donnees[3]['dates_training']?><br>.</div>
+                </div>
+                <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                  <!-- <h4>UIzards</h4> -->
+                  <h5><?php echo $donnees[3]['title_training']?></h5>
+                  <h3><?php echo $donnees[3]['subtitle_training']?></h3>
+                  <p> <?php echo $donnees[3]['training_establishment']?></p>
+                </div>
+              
+             
+            
             <a class="btn btn-dark btn-xl js-scroll-trigger" href="#loisirs">Mes loisirs</a>
-          </div>
+          </div> 
         </div>
       </div>
     </section>
@@ -377,45 +463,43 @@
       
     <h2 class="mx-auto mb-5">Mes loisirs</h2>
 
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/portfolio-3.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+      </div>
+
     <a class="btn btn-primary btn-xl" href="#contact">Contact</a>
         
 
   </div>
   </section>
 
-    <!-- Call to Action -->
-    <!-- <section class="content-section bg-primary text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-        <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-        <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
-      </div>
-    </section> -->
+  <!-- Contactez-moi -->
+  <section class="content-section bg-primary text-white text-center" id="contact">
+  <div class="container">
+    <div class="content-section-heading">
+      <!-- <h3 class="text-secondary mb-0">Services</h3> -->
+        <p class="text-center w-responsive mx-auto mb-5">Andrée Baptiste</p>
+        <p class="text-center w-responsive mx-auto mb-5"></p>
 
-    <!-- Map -->
-    <!-- <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br/>
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
-    </section> -->
+        <a class="btn btn-primary btn-xl p-2 px-3 mr-4 d-none d-md-inline-block" href="formulaire/index.php">Contactez-moi !</a>
+    </div>
+    <div class="row">
+    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+    </div>
+    </div>
+  </section>   
 
-    <!-- Contactez-moi -->
-    <section class="content-section bg-primary text-white text-center" id="contact">
-    <div class="container">
-      <div class="content-section-heading">
-        <!-- <h3 class="text-secondary mb-0">Services</h3> -->
-          <p class="text-center w-responsive mx-auto mb-5">Andrée Baptiste</p>
-          <p class="text-center w-responsive mx-auto mb-5"></p>
-
-          <a class="btn btn-primary btn-xl" href="#contact">Contactez-moi !</a>
-      </div>
-      <div class="row">
-      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-      </div>
-      </div>
-    </section>        
+      
 
 </div> <!-- fin div container -->
 
@@ -431,6 +515,5 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
 
-  </body>
-
-</html>
+ <?php
+require_once 'inc/bas.inc.php';
