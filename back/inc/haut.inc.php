@@ -44,6 +44,7 @@
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'experiences.php">Expériences pro</a></li>';
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'loisirs.php">Loisirs</a></li>';
                         echo '<li><a class="nav-link" href="'. RACINE_SITE .'reseaux.php">Réseaux</a></li>';
+                        echo '<li><a class="nav-link" href="'. RACINE_SITE .'formulaire/comments.php">Messages</a></li>';
                     }  
 
                     // menu si internaute connecté :

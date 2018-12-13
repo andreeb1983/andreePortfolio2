@@ -251,7 +251,6 @@
               </div><!-- fin div class container -->
             </div><!-- fin div col-lg-10 --> 
           </div><!-- fin div class row -->
-      </div><!-- fin div class container text-center-->
     </section><!-- fin section -->
 
 
@@ -366,13 +365,9 @@
 
         <div class="row">
           <div class="col-md-12 col-md-offset-3">
-            <a class="btn btn-primary btn-xl" href="#formations">Formations</a>
+            <p class="text-center"><a class="btn btn-primary btn-xl" href="#formations">Formations</a></p>
           </div>
-        </div> 
-
-        </div><!-- fin din class container -->
-
-      </div><!-- fin div container text-center-->   
+        </div>   
 
     </section><!-- fin section --><!-- fin Expériences -->
 
@@ -398,12 +393,13 @@
                 <div class="row media">
                   <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <div class="expertiesico"><?php echo $donnees[0]['dates_training']?><br>.</div>
-                </div>
+                  </div>
                 <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                   <!-- <h4>UIzards</h4> -->
-                  <h5><?php echo $donnees[0]['title_training']?></h5>
-                  <h3><?php echo $donnees[0]['subtitle_training']?></h3>
+                  <h4><?php echo $donnees[0]['title_training']?></h4>
+                  <h6><?php echo $donnees[0]['subtitle_training']?></h6>
                   <p> <?php echo $donnees[0]['training_establishment']?></p>
+                </div>
                 </div>
 
                 <div class="row media">
@@ -412,9 +408,10 @@
                 </div>
                 <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                   <!-- <h4>UIzards</h4> -->
-                  <h5><?php echo $donnees[1]['title_training']?></h5>
-                  <h3><?php echo $donnees[1]['subtitle_training']?></h3>
+                  <h4><?php echo $donnees[1]['title_training']?></h4>
+                  <h6><?php echo $donnees[1]['subtitle_training']?></h6>
                   <p> <?php echo $donnees[1]['training_establishment']?></p>
+                </div>
                 </div>
 
                 <div class="row media">
@@ -423,9 +420,10 @@
                 </div>
                 <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                   <!-- <h4>UIzards</h4> -->
-                  <h5><?php echo $donnees[2]['title_training']?></h5>
-                  <h3><?php echo $donnees[2]['subtitle_training']?></h3>
+                  <h4><?php echo $donnees[2]['title_training']?></h4>
+                  <h6><?php echo $donnees[2]['subtitle_training']?></h6>
                   <p> <?php echo $donnees[2]['training_establishment']?></p>
+                </div>
                 </div>
 
                 <div class="row media">
@@ -434,21 +432,28 @@
                 </div>
                 <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
                   <!-- <h4>UIzards</h4> -->
-                  <h5><?php echo $donnees[3]['title_training']?></h5>
-                  <h3><?php echo $donnees[3]['subtitle_training']?></h3>
+                  <h4><?php echo $donnees[3]['title_training']?></h4>
+                  <h6><?php echo $donnees[3]['subtitle_training']?></h6>
                   <p> <?php echo $donnees[3]['training_establishment']?></p>
                 </div>
-              
-             
+                </div>
+
+              </div> 
+            </div> 
             
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#loisirs">Mes loisirs</a>
+          <div class="row">
+            <div class="col-md-12 col-md-offset-3">
+              <p class="text-center"><a class="btn btn-primary btn-xl" href="#loisirs">Loisirs</a></p>
+            </div>
           </div> 
-        </div>
-      </div>
-    </section>
+
+          </div>  
+          </div>  
+         
+      </div><!-- fin div class container -->
+    </section><!-- fin section -->
 
     <!-- Mes loisirs -->
-    </section> 
     <section class="callout" id="loisirs">
       <div class="container text-center">
 
@@ -466,13 +471,16 @@
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="img/portfolio-3.jpg" alt="First slide">
+            <img class="d-block w-100" src="img/cuisiner.jpg" alt="First slide" width="400"><br>
+            <h5 class="texte-dark text-center">Cuisiner</h5><br>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="img/nager.jpg" alt="Second slide" width="400"><br>
+            <h5 class="texte-dark text-center">Nager</h5><br>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
+            <img class="d-block w-100" src="img/voyager.jpeg" alt="Third slide" width="400"><br>
+            <h5 class="texte-dark text-center">Voyager</h5><br>
           </div>
         </div>
       </div>
@@ -491,7 +499,7 @@
         <p class="text-center w-responsive mx-auto mb-5">Andrée Baptiste</p>
         <p class="text-center w-responsive mx-auto mb-5"></p>
 
-        <a class="btn btn-primary btn-xl p-2 px-3 mr-4 d-none d-md-inline-block" href="formulaire/index.php">Contactez-moi !</a>
+        <a class="btn btn-primary btn-xl" href="formulaire/index.php">Contactez-moi !</a>
     </div>
     <div class="row">
     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -501,9 +509,9 @@
 
       
 
-</div> <!-- fin div container -->
+<!-- </div> fin div container -->
 
-</section>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

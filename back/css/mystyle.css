@@ -52,7 +52,7 @@
 
 
 /*----------------------------------------------------
-	6. Work Experience Style
+	 Experiences
 ------------------------------------------------------*/
 
 .myexperties {
@@ -83,7 +83,7 @@
 .expertiesdesc h4 {
 	font-size:14px;
 	font-weight:300;
-	color:#UIzards;
+	/* color:#UIzards; */
 	line-height:normal;
 	text-transform:uppercase;
 	letter-spacing:2px;
@@ -96,3 +96,13 @@
 	font-weight:400;
 }
 
+
+footer {
+   position: relative;
+  /* left: 0; */
+  bottom: 0;
+  width: 100%;
+  background-color: #C46210;
+  color: white;
+  text-align: center;
+}
